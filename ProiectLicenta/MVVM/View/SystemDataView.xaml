@@ -1,0 +1,25 @@
+﻿<UserControl x:Class="ProiectLicenta.MVVM.View.SystemDataView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:ProiectLicenta.MVVM.View"
+             xmlns:local1="clr-namespace:ProiectLicenta.MVVM.ViewModel"
+             mc:Ignorable="d" 
+             d:DesignHeight="720" d:DesignWidth="1280"
+             >
+    <UserControl.DataContext>
+        <local1:MainViewModel/>
+    </UserControl.DataContext>
+    <StackPanel Background="AliceBlue">
+        <TextBlock Text="System Data" FontSize="50" HorizontalAlignment="Left" Margin="0,0,0,20"/>
+        <ListView ItemsSource="{Binding SystemData}" Height="500">
+            <ListView.View>
+                <GridView AllowsColumnReorder="False">
+                    <GridViewColumn DisplayMemberBinding="{Binding Key}"/>
+                    <GridViewColumn DisplayMemberBinding="{Binding Value}"/>
+                </GridView>
+            </ListView.View>
+        </ListView>
+    </StackPanel>
+</UserControl>
