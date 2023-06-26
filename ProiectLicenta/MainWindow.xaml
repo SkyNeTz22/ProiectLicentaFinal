@@ -304,7 +304,7 @@
                              FontSize="14"
                              Style="{StaticResource MenuButtonTheme}"
                              Command="{Binding CpuDataViewCommand}"/>
-                <RadioButton Content="RAM Memory Usage"
+                <RadioButton Content="RAM Usage"
                              Height="50"
                              Foreground="White"
                              FontSize="14"
